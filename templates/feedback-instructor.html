@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSCB63 Design and Analysis of Data Structures</title>
+        <link rel="stylesheet" href="../static/feedback-instructor.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">PIAZZA</a></li>
+                    <li><a href="https://markus.utsc.utoronto.ca/cscb20w21/assignments" target="_blank">MARKUS</a></li>
+                    <li><a href="/tutorials">TUTORIALS</a></li>
+                    <li><a href="/assignments">ASSIGNMENTS</a></li>
+                    <li><a href="/marks">MARKS</a></li>
+                    <li><a href="/course-team">COURSE TEAM</a></li>
+                    <li><a class="active" href="#">FEEDBACK</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <h3><b>Anonymous Feedback</b></h3>
+            <hr>
+            <div class="feedback_list">
+				{% for feedback in all_feedback %}
+					<div class="student_feedback">
+                        Sent {{ feedback.time }} : <br>
+                        <p>
+                            a) {{ feedback.qa }} <br>
+                            b) {{ feedback.qb }} <br>
+                            c) {{ feedback.qc }} <br>
+                            d) {{ feedback.qd }} <br>
+                        </p>
+					</div> <hr>
+				{% endfor %}
+            </div>
+        </main>
+        <footer>
+            <p>
+                <a id="dept-link" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Faculty of Computer Science</a><br>
+                Site designed and created by Oceana Ling-Kurie, Xiwei Tian, and William Rutherford<br>
+                CSCB20 Winter 2021
+            </p>
+        </footer>
+    </body>
+</html>

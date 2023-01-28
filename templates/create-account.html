@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SIGN UP - CSCB63</title>
+        <link rel="stylesheet" href="../static/create-account.css"/>
+    </head>
+        <body>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <div class="account-form">
+                <img src="../static/pics/icon.png" class="icon">
+                <h1>Sign Up</h1>
+                <form action="/account-form" method="POST">
+                    <p><b>Username</b></p>
+                    <input type="text" name="username" placeholder="Create Username" required>
+					<p><b>Student Number</b></p>
+                    <input type="text" name="student-num" placeholder="Student Number">
+                    <p><b>Password</b></p>
+                    <input type="password" name="password" placeholder="Create Password" required>
+                    <div id="ckbox">
+                        <input type="checkbox" name="instructor" value="1">
+                        <label for="instructor">Instructor</label><br>
+                    </div>
+                    <input type="submit" name="Submit" value="Sign Up">
+                </form>
+            </div>
+        </body>
+</html>

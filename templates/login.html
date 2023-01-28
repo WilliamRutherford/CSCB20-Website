@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LOGIN - CSCB63</title>
+        <link rel="stylesheet" href="../static/login.css"/>
+    </head>
+        <body>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <div class="login">
+                <img src="../static/pics/icon.png" class="icon">
+                <h1>Login</h1>
+                <form action="/login" method="POST">
+                    <p><b>Username</b></p>
+                    <input type="text" name="username" placeholder="Enter Username" required>
+                    <p><b>Password</b></p>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <div class="buttons">
+                        <input type="submit" name="" value="Login">
+                        <a href="/create-account"><input type="button" name="" value="Sign Up"></a>
+                    </div>
+                    <a href="#">Forgot Username or Password</a>
+                </form>
+            </div>
+        </body>
+</html>

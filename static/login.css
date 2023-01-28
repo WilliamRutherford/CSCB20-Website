@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(pics/campus.jpeg);
+    background-size: cover;
+}
+
+#header {
+    padding: 2px;
+    text-align: center;
+    background: #003366;
+    color: white;
+    font-family: Verdana;
+    font-size: 12px;
+  }
+
+.login {
+    width: 320px;
+    height: 410px;
+    background: black;
+    color: white;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+    font-family: Verdana;
+}
+
+.login h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login input[type="text"],[type="password"] {
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    background: transparent;
+    height: 30px;
+    width: 100%;
+    color: white;
+}
+
+.login input[type="submit"],[type="button"] {
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 100%;
+    background: #003366;
+    color: white;
+    font-size: 18px;
+}
+
+.login input[type="submit"]:hover,input[type="button"]:hover {
+    cursor: pointer;
+    background: #8185B6;
+}
+
+.login a {
+    font-size: 12px;
+    color: white;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 60%;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 40px);
+}

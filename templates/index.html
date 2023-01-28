@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSCB63 Design and Analysis of Data Structures</title>
+        <link rel="stylesheet" href="../static/index.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <ul>
+                    <li><a class="active" href="/">HOME</a></li>
+                    <li><a href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">PIAZZA</a></li>
+                    <li><a href="https://markus.utsc.utoronto.ca/cscb20w21/assignments" target="_blank">MARKUS</a></li>
+                    <li><a href="/tutorials">TUTORIALS</a></li>
+                    <li><a href="/assignments">ASSIGNMENTS</a></li>
+                    <li><a href="/marks">MARKS</a></li>
+                    <li><a href="/course-team">COURSE TEAM</a></li>
+                    <li><a href="/feedback">FEEDBACK</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <!-- CONTENT -->
+            <div id="welcome">
+                {% if user.instructor %}
+                <h2>Welcome, {{ user.utorid }}! Click <a href="/marks" target="_blank">here</a> to view all student's marks.</h2>
+                {% else %}
+                <h2>Welcome, {{ user.utorid }}! Click <a href="/marks" target="_blank">here</a> to view your marks.</h2>
+                {% endif %}
+            </div>
+            <h3><b>General Information</b></h3>
+            <hr>
+            <details>
+                <summary class="section"><b>Course Description<b></summary>
+                    <p>
+                        Design, analysis, implementation and comparison of efficient data structures for common abstract data types.<br>
+                        Priority queues: heaps and mergeable heaps. Dictionaries: balanced binary search trees, B-trees, hashing.<br>
+                        Amortization: data structures for managing dynamic tables and disjoint sets. Data structures for representing graphs.<br>
+                        Graph searches.<br><br>
+                        Exclusion CSC263H, CSC265H, (CSCC78H)<br><br>
+                        Prerequisite CSCB36H or (CSCB38H) & [CGPA 2.75 or enrolment in a CSC subject POSt]<br><br>
+                        <a href="../static/files/syllabus.pdf" target="_blank"><b>Syllabus</b></a><br>
+                    </p>
+            </details>
+            <details>
+                <summary class="section"><b>Instructor<b></summary>
+                    <p>
+                        <img src="../static/pics/Anna_Bretscher.jpg" border="2"><br>
+                        <b>Dr. Anna Bretscher<b><br>
+                        Email: <a href="mailto:anna.bretscher@utoronto.ca" target="_blank">anna.bretscher@utoronto.ca</a><br>
+                        Office: IC 493<br>
+                    </p>
+            </details>
+            <details>
+                <summary class="section"><b>Office Hours<b></summary>
+                    <p>
+                        Mondays 11:00-12:30, Friday 10:40-11:30. <i>Please see the calendar for weekly changes.<i><br>
+                    </p>
+            </details>
+        </main>
+        <footer>
+            <p>
+                <a id="dept-link" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Faculty of Computer Science</a><br>
+                Site designed and created by Oceana Ling-Kurie, Xiwei Tian, and William Rutherford<br>
+                CSCB20 Winter 2021
+            </p>
+        </footer>
+    </body>
+</html>

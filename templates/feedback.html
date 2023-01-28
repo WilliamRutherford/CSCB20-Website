@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSCB63 Design and Analysis of Data Structures</title>
+        <link rel="stylesheet" href="../static/feedback.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">PIAZZA</a></li>
+                    <li><a href="https://markus.utsc.utoronto.ca/cscb20w21/assignments" target="_blank">MARKUS</a></li>
+                    <li><a href="/tutorials">TUTORIALS</a></li>
+                    <li><a href="/assignments">ASSIGNMENTS</a></li>
+                    <li><a href="/marks">MARKS</a></li>
+                    <li><a href="/course-team">COURSE TEAM</a></li>
+                    <li><a class="active" href="#">FEEDBACK</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <h3><b>Anonymous Feedback Form</b></h3>
+            <p>
+                If you have any feedback related to this course and the course team, please fill out the form below.<br>
+                All feedback is anonymous.<br>
+            </p>
+            <hr>
+            <div class="feedback-form">
+                <form action="/send-feedback" method="POST">
+				<h4> Select the instructor to give feedback to: </h4>
+				<select name="instructor" id="dropdown">
+                    <option disabled selected value>Select Instructor</option>
+					{% for teacher in instructors %}
+					<option value="{{teacher}}"> {{teacher}}</option>
+					{% endfor %}
+					<!--<textarea type="text" id="txtbox" name="instructor" maxlength="600"></textarea><br>-->
+				</select><br><ul>
+					<p> What do you like about the instructor teaching?</p><br>
+                    <textarea type="text" id="txtbox" name="a" maxlength="600"></textarea><br>
+					<p> What do you recommend the instructor to do to improve their teaching?</p><br>
+					<textarea type="text" id="txtbox" name="b" maxlength="600"></textarea><br>
+					<p> What do you like about the labs?</p><br>
+					<textarea type="text" id="txtbox" name="c" maxlength="600"></textarea><br>
+					<p> What do you recommend the lab instructors to do to improve their lab teaching?</p><br>
+					<textarea type="text" id="txtbox" name="d" maxlength="600"></textarea><br>
+                    <input type="submit" id="submit-button" value="Submit">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>
+                <a id="dept-link" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Faculty of Computer Science</a><br>
+                Site designed and created by Oceana Ling-Kurie, Xiwei Tian, and William Rutherford<br>
+                CSCB20 Winter 2021
+            </p>
+        </footer>
+    </body>
+</html>

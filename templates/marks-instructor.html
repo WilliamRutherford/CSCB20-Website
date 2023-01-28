@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSCB63 Design and Analysis of Data Structures</title>
+        <link rel="stylesheet" href="../static/marks-instructor.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">PIAZZA</a></li>
+                    <li><a href="https://markus.utsc.utoronto.ca/cscb20w21/assignments" target="_blank">MARKUS</a></li>
+                    <li><a href="/tutorials">TUTORIALS</a></li>
+                    <li><a href="/assignments">ASSIGNMENTS</a></li>
+                    <li><a class="active" href="#">MARKS</a></li>
+                    <li><a href="/course-team">COURSE TEAM</a></li>
+                    <li><a href="/feedback">FEEDBACK</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <!-- CONTENT -->
+            <h3><b>Student Marks</b></h3>
+            <hr>
+            <form action="/marks-instructor" method="POST">
+                <div class="table">
+                    <div class="column">
+                        <div class="row">ASSESSMENT</div>
+                        <div class="row">Assignment 1</div>
+                        <div class="row">Assignment 2</div>
+                        <div class="row">Assignment 3</div>
+                        <div class="row">Test 1</div>
+                        <div class="row">Test 2</div>
+                        <div class="row">Test 3</div>
+                        <div class="row">Final</div>
+                    </div>
+                    <!--{% for mark in marks %}-->
+                    <div class="column">
+                        <div class="row">{{ mark.utorid }}</div>
+                        <div class="row">{{ mark.a1 }}</div>
+                        <div class="row">{{ mark.a2 }}</div>
+                        <div class="row">{{ mark.a3 }}</div>
+                        <div class="row">{{ mark.t1 }}</div>
+                        <div class="row">{{ mark.t2 }}</div>
+                        <div class="row">{{ mark.t3 }}</div>
+                        <div class="row">{{ mark.final }}</div>
+                    </div>
+                    <!--{% endfor %}-->
+                    <div class="column">
+                        <div class="row">
+                            <select name="student" id="dropdown">
+                                <option disabled selected value>Select Student</option>
+                                {% for student in students %}
+                                <option value="{{ student }}">{{ student }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="row">
+                            <input name="a1" type="number" min=0>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input name="a2" type="number" min=0>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input name="a3" type="number" min=0>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input name="t1" type="number" min=0>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input name="t2" type="number" min=0>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input name="t3" type="number" min=0>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <input  name="final" type="number" min=0>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="submit-button" value="UPDATE MARK">
+            </form>
+            <br>
+            <!-- REGRADE REQUESTS -->
+            <h3><b>Regrade Request</b></h3>
+            <hr>
+            {% for remark in remarks %}
+            <div class="remark">
+                <b>Student:</b> {{ remark.utorid }}<br>
+                <b>Assessment:</b> {{ remark.assessment }}<br>
+                <b>Explanation:</b> {{ remark.explanation }}<br>
+            </div>
+            <hr>
+            {% endfor %}
+        </main>
+        <footer>
+            <p>
+                <a id="dept-link" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Faculty of Computer Science</a><br>
+                Site designed and created by Oceana Ling-Kurie, Xiwei Tian, and William Rutherford<br>
+                CSCB20 Winter 2021
+            </p>
+        </footer>
+    </body>
+</html>

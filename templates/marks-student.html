@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSCB63 Design and Analysis of Data Structures</title>
+        <link rel="stylesheet" href="../static/marks-students.css"/>
+    </head>
+    <body>
+        <main>
+            <div id="nav">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="https://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">PIAZZA</a></li>
+                    <li><a href="https://markus.utsc.utoronto.ca/cscb20w21/assignments" target="_blank">MARKUS</a></li>
+                    <li><a href="/tutorials">TUTORIALS</a></li>
+                    <li><a href="/assignments">ASSIGNMENTS</a></li>
+                    <li><a class="active" href="#">MARKS</a></li>
+                    <li><a href="/course-team">COURSE TEAM</a></li>
+                    <li><a href="/feedback">FEEDBACK</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </div>
+            <div id="header">
+                <h1><b>CSCB63: Design and Analysis of Data Structures</b></h1>
+                <h2><b>The University of Toronto Scarborough</b></h2>
+            </div>
+            <!-- CONTENT -->
+            <h3><b>Marks</b></h3>
+            <hr>
+            <div class="table">
+                <div class="column">
+                    <div class="row">ASSESSMENT</div>
+                    <div class="row">Assignment 1</div>
+                    <div class="row">Assignment 2</div>
+                    <div class="row">Assignment 3</div>
+                    <div class="row">Test 1</div>
+                    <div class="row">Test 2</div>
+                    <div class="row">Test 3</div>
+                    <div class="row">Final</div>
+                </div>
+                <div class="column">
+                    <div class="row">{{ marks.utorid }}</div>
+                    <div class="row">{{ marks.a1 }}</div>
+                    <div class="row">{{ marks.a2 }}</div>
+                    <div class="row">{{ marks.a3 }}</div>
+                    <div class="row">{{ marks.t1 }}</div>
+                    <div class="row">{{ marks.t2 }}</div>
+                    <div class="row">{{ marks.t3 }}</div>
+                    <div class="row">{{ marks.final }}</div>
+                </div>
+            </div>
+            <br>
+            <!-- REGRADE REQUEST -->
+            <h3><b>Regrade Request</b></h3>
+            <hr>
+            <div class="regrade">
+                <label for="eval">Select an assessment to request regade:<br></label>
+                <select name="eval" id="dropdown">
+                    <option value="a1">Assignment 1</option>
+                    <option value="a2">Assignment 2</option>
+                    <option value="a3">Assignment 3</option>
+                    <option value="t1">Test 1</option>
+                    <option value="t2">Test 2</option>
+                    <option value="t3">Test 3</option>
+                    <option value="final">Final</option>
+                </select>
+                <form>
+                    <textarea type="text" id="txtbox" maxlength="400"></textarea>
+                    <input type="submit" id="submit-button" value="Submit">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>
+                <a id="dept-link" href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Faculty of Computer Science</a><br>
+                Site designed and created by Oceana Ling-Kurie, Xiwei Tian, and William Rutherford<br>
+                CSCB20 Winter 2021
+            </p>
+        </footer>
+    </body>
+</html>
